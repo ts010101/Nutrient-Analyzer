@@ -1,0 +1,26 @@
+{{!-- have to use Jonathan's microservice Here --}}
+{{!-- Alternative recipe page --}}
+{{!-- Search for recipes --}}
+<head>
+  <h2>Healthy Recipe Reccomendations</h2>
+    <p>Please input a food that you would like healthy recipe reccomendations for. Then click on the search button to have a list of 
+        healthy recipe reccomendations for that specified food search. You can click on the specific recipe to learn more about the recipe.
+    </p>
+</head>
+
+
+<form>
+    <input type="text" placeholder="Search..." name="search">
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <tr>
+        <th>Recipe</th>
+    </tr>
+    {{#each data}}
+    <tr>
+        <td><a href={{this.recipe.url}}>{{this.recipe.label}}</a></td>
+    </tr>
+    {{/each}}
+</table>

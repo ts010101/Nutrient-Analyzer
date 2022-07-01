@@ -1,0 +1,52 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<head>
+  <h2>Meal Nutrient Analyzer</h2>
+    <p>Please input what you ate to learn about the nutrient breakdown of your meal. Please input one meal at a time. 
+  For example, "chicken and rice and beans" would be an example of one meal. This service will not track your meals. It only displays 
+  nutrient data for one meal at a time. Please note that you have to include the word "and" in between different foods. Then, click 
+  the search button to show your meal nutrient information.</p>
+</head>
+
+<form>
+    <input type="text" placeholder="Search..." name="search">
+    <button type="submit">Search</button>
+</form>
+{{#if data}}
+{{#with data}}
+Calories: {{round ENERC_KCAL}}kcal<br/>
+Protein: {{round PROCNT}}g<br/>
+Fat: {{round FAT}}g<br/>
+Carbs: {{round CHOCDF}}g<br/>
+{{/with}}
+{{/if}}
+
+
+{{!-- <table style="width:100%">
+  <tr>
+    <th>Breakfast</th>
+    <th>Lunch</th> 
+    <th>Dinner</th>
+  </tr>
+  <tr>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+  </tr>
+  <tr>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+  </tr>
+  <tr>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+    <td>Please Input a Entry</td>
+  </tr>
+</table> --}}
+
+
